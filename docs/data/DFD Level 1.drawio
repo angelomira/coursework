@@ -1,0 +1,165 @@
+<mxfile host="Electron" modified="2024-05-21T22:54:03.786Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.4.0 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="f3f2ZidqJD3RsmbN9xDz" version="24.4.0" type="device">
+  <diagram name="Страница — 1" id="iW2YnklHtWerdvTFRIqD">
+    <mxGraphModel dx="2261" dy="884" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="VOciisVstkL_At7ypST2-33" value="Запрос на обмен к сотруднику&lt;br&gt;пункта" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;curved=0;" parent="1" source="VOciisVstkL_At7ypST2-29" target="VOciisVstkL_At7ypST2-32" edge="1">
+          <mxGeometry x="0.4165" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VOciisVstkL_At7ypST2-29" value="1.0" style="swimlane;whiteSpace=wrap;html=1;startSize=40;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="-60" y="210" width="160" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="VOciisVstkL_At7ypST2-30" value="Совершить обмен валюты" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="VOciisVstkL_At7ypST2-29" vertex="1">
+          <mxGeometry x="-5" y="60" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VOciisVstkL_At7ypST2-40" value="Запрос к&lt;br&gt;фондам" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VOciisVstkL_At7ypST2-32" target="VOciisVstkL_At7ypST2-37" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VOciisVstkL_At7ypST2-85" value="Данные&lt;br&gt;по обмену" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;curved=0;" parent="1" source="VOciisVstkL_At7ypST2-32" target="VOciisVstkL_At7ypST2-82" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VOciisVstkL_At7ypST2-32" value="Сотрудник обменного пункта" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="248.75" y="520" width="175" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VOciisVstkL_At7ypST2-39" value="Возможность &lt;br&gt;к обмену" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" parent="1" source="VOciisVstkL_At7ypST2-37" target="VOciisVstkL_At7ypST2-32" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VOciisVstkL_At7ypST2-47" value="Запрос к&lt;br&gt;курсам" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VOciisVstkL_At7ypST2-37" target="VOciisVstkL_At7ypST2-45" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VOciisVstkL_At7ypST2-37" value="2.0" style="swimlane;whiteSpace=wrap;html=1;startSize=40;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="248.75" y="670" width="175" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="VOciisVstkL_At7ypST2-38" value="Проверить валютные фонды&lt;br&gt;клиента пункта" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="VOciisVstkL_At7ypST2-37" vertex="1">
+          <mxGeometry x="-7.5" y="50" width="190" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="VOciisVstkL_At7ypST2-43" value="Запрос" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;endArrow=none;endFill=0;startArrow=classic;startFill=1;" parent="1" source="VOciisVstkL_At7ypST2-41" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="423.75" y="721.3333333333335" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VOciisVstkL_At7ypST2-44" value="Фонды клиента" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" parent="1" source="VOciisVstkL_At7ypST2-41" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="423.75" y="744" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VOciisVstkL_At7ypST2-41" value="D" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;align=center;textDirection=vertical-lr;labelPosition=center;verticalLabelPosition=middle;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="543.75" y="710" width="200" height="45" as="geometry">
+            <mxRectangle x="550" y="610" width="40" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VOciisVstkL_At7ypST2-42" value="Валютные фонды клиента" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="VOciisVstkL_At7ypST2-41" vertex="1">
+          <mxGeometry x="30" y="7.5" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VOciisVstkL_At7ypST2-48" value="Возможность &lt;br&gt;к конвертации" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" parent="1" source="VOciisVstkL_At7ypST2-45" target="VOciisVstkL_At7ypST2-37" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VOciisVstkL_At7ypST2-45" value="2.1" style="swimlane;whiteSpace=wrap;html=1;startSize=40;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="248.75" y="840" width="175" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="VOciisVstkL_At7ypST2-46" value="Получить обменные курсы&lt;br&gt;валют" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="VOciisVstkL_At7ypST2-45" vertex="1">
+          <mxGeometry x="2.5" y="50" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="VOciisVstkL_At7ypST2-49" value="Запрос" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;endArrow=none;endFill=0;startArrow=classic;startFill=1;" parent="1" source="VOciisVstkL_At7ypST2-51" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="423.75" y="891.3333333333335" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VOciisVstkL_At7ypST2-50" value="Курсы валют" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" parent="1" source="VOciisVstkL_At7ypST2-51" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="423.75" y="914" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VOciisVstkL_At7ypST2-51" value="E" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;textDirection=vertical-lr;" parent="1" vertex="1">
+          <mxGeometry x="543.75" y="880" width="200" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="VOciisVstkL_At7ypST2-52" value="ЦБ РФ" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="VOciisVstkL_At7ypST2-51" vertex="1">
+          <mxGeometry x="30" y="7.5" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VOciisVstkL_At7ypST2-64" value="Обмен валюты" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=0;" parent="1" source="VOciisVstkL_At7ypST2-57" target="VOciisVstkL_At7ypST2-29" edge="1">
+          <mxGeometry x="0.4361" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VOciisVstkL_At7ypST2-57" value="Клиент обменного пункта" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-632" y="520" width="175" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VOciisVstkL_At7ypST2-62" value="Подтвердить обмен" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" parent="1" source="VOciisVstkL_At7ypST2-58" target="VOciisVstkL_At7ypST2-32" edge="1">
+          <mxGeometry x="-0.3273" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VOciisVstkL_At7ypST2-63" value="Подтверждение" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;curved=0;" parent="1" source="VOciisVstkL_At7ypST2-58" target="VOciisVstkL_At7ypST2-57" edge="1">
+          <mxGeometry x="-0.2302" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VOciisVstkL_At7ypST2-58" value="3.0" style="swimlane;whiteSpace=wrap;html=1;startSize=40;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="-60" y="370" width="165" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="VOciisVstkL_At7ypST2-59" value="Запросить подтверждение&lt;br&gt;на обмен у клиента" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="VOciisVstkL_At7ypST2-58" vertex="1">
+          <mxGeometry x="-5" y="55" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="VOciisVstkL_At7ypST2-68" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" parent="1" source="VOciisVstkL_At7ypST2-66" target="VOciisVstkL_At7ypST2-57" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VOciisVstkL_At7ypST2-66" value="4.0" style="swimlane;whiteSpace=wrap;html=1;startSize=40;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="-588" y="670" width="175" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="VOciisVstkL_At7ypST2-67" value="Произвести пополнения&amp;nbsp;&lt;br&gt;валютного фонда" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="VOciisVstkL_At7ypST2-66" vertex="1">
+          <mxGeometry x="5" y="50" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="VOciisVstkL_At7ypST2-76" value="Информация&lt;br&gt;об пополнении" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" parent="1" source="VOciisVstkL_At7ypST2-69" target="VOciisVstkL_At7ypST2-66" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VOciisVstkL_At7ypST2-80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="VOciisVstkL_At7ypST2-69" target="VOciisVstkL_At7ypST2-78" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VOciisVstkL_At7ypST2-69" value="D" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;align=center;textDirection=vertical-lr;labelPosition=center;verticalLabelPosition=middle;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="-280" y="702.5" width="200" height="45" as="geometry">
+            <mxRectangle x="550" y="610" width="40" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VOciisVstkL_At7ypST2-70" value="История операций" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="VOciisVstkL_At7ypST2-69" vertex="1">
+          <mxGeometry x="30" y="7.5" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VOciisVstkL_At7ypST2-81" value="Информация об пополнении &lt;br&gt;и обмене" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;curved=0;" parent="1" source="VOciisVstkL_At7ypST2-78" target="VOciisVstkL_At7ypST2-32" edge="1">
+          <mxGeometry x="-0.5391" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VOciisVstkL_At7ypST2-78" value="4.1" style="swimlane;whiteSpace=wrap;html=1;startSize=40;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="-10" y="670" width="180" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="VOciisVstkL_At7ypST2-79" value="Обработать пополнение и&amp;nbsp;&lt;br&gt;сделать резервацию на&lt;br&gt;валютный обмен для фондов" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="VOciisVstkL_At7ypST2-78" vertex="1">
+          <mxGeometry x="-10" y="40" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VOciisVstkL_At7ypST2-89" value="Запрос" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VOciisVstkL_At7ypST2-82" target="VOciisVstkL_At7ypST2-86" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VOciisVstkL_At7ypST2-90" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=0;" parent="1" source="VOciisVstkL_At7ypST2-82" target="VOciisVstkL_At7ypST2-57" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VOciisVstkL_At7ypST2-82" value="4.2" style="swimlane;whiteSpace=wrap;html=1;startSize=40;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="-10" y="840" width="180" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="VOciisVstkL_At7ypST2-83" value="Выполнить валютный обмен&lt;br&gt;внутри фондов клиента" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="VOciisVstkL_At7ypST2-82" vertex="1">
+          <mxGeometry y="60" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="VOciisVstkL_At7ypST2-86" value="D" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;align=center;textDirection=vertical-lr;labelPosition=center;verticalLabelPosition=middle;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="-20" y="1020" width="200" height="45" as="geometry">
+            <mxRectangle x="550" y="610" width="40" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VOciisVstkL_At7ypST2-87" value="История чеков" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="VOciisVstkL_At7ypST2-86" vertex="1">
+          <mxGeometry x="30" y="7.5" width="160" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

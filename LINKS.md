@@ -1,0 +1,9 @@
+https://www.alta.ru/currency/calc/
+https://www.exchange-rates.org/ru/конвертер
+https://cash.rbc.ru/cash/converter.html?from=USD&to=RUR&sum=522.26545&date=&rate=cash
+https://calculator888.ru/converter-valut
+https://fxapi.com/docs/examples/currency-converter-javascript#introduction
+https://www.npmjs.com/package/@everapi/fxapi-js
+https://www.cbr.ru/currency_base/dynamics/?UniDbQuery.Posted=True&UniDbQuery.so=1&UniDbQuery.mode=2&UniDbQuery.date_req1=&UniDbQuery.date_req2=&UniDbQuery.VAL_NM_RQ=R01010&UniDbQuery.From=12.04.2024&UniDbQuery.To=19.04.2024
+https://www.bestchange.ru/
+https://xecdapi.xe.com/docs/v1/#/Mid-market%20Rates/get_v1_convert_to

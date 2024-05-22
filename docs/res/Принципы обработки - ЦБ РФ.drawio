@@ -1,0 +1,64 @@
+<mxfile host="Electron" modified="2024-05-22T20:16:38.461Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.4.0 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="i9hC2i3BPUUWhtpeGTNN" version="24.4.0" type="device">
+  <diagram name="Страница — 1" id="bOwyZhuj-AmUUa6PjYXj">
+    <mxGraphModel dx="1098" dy="796" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="5hc7V5AxbfLxb62L2-km-4" value="Запрос на получение&lt;br&gt;курсов валют" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="5hc7V5AxbfLxb62L2-km-1" target="5hc7V5AxbfLxb62L2-km-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5hc7V5AxbfLxb62L2-km-1" value="Запрос от клиента&lt;br&gt;(фронтенд)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="90" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5hc7V5AxbfLxb62L2-km-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endArrow=cross;endFill=0;" edge="1" parent="1" source="5hc7V5AxbfLxb62L2-km-2" target="5hc7V5AxbfLxb62L2-km-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5hc7V5AxbfLxb62L2-km-2" value="Rest API" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5hc7V5AxbfLxb62L2-km-8" value="Запрос в локальную часть&lt;br&gt;сервера на данные" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="5hc7V5AxbfLxb62L2-km-5" target="5hc7V5AxbfLxb62L2-km-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5hc7V5AxbfLxb62L2-km-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="5hc7V5AxbfLxb62L2-km-5" target="5hc7V5AxbfLxb62L2-km-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5hc7V5AxbfLxb62L2-km-5" value="Сервер" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="510" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5hc7V5AxbfLxb62L2-km-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=cross;endFill=0;" edge="1" parent="1" source="5hc7V5AxbfLxb62L2-km-7" target="5hc7V5AxbfLxb62L2-km-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5hc7V5AxbfLxb62L2-km-7" value="Запрос к подсерверу&lt;br&gt;парсеру данных&lt;br&gt;ЦБ РФ" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="400" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5hc7V5AxbfLxb62L2-km-12" value="Вызов класса" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="5hc7V5AxbfLxb62L2-km-9" target="5hc7V5AxbfLxb62L2-km-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5hc7V5AxbfLxb62L2-km-9" value="CR-API" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5hc7V5AxbfLxb62L2-km-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=cross;endFill=0;" edge="1" parent="1" source="5hc7V5AxbfLxb62L2-km-11" target="5hc7V5AxbfLxb62L2-km-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5hc7V5AxbfLxb62L2-km-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="5hc7V5AxbfLxb62L2-km-11" target="5hc7V5AxbfLxb62L2-km-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5hc7V5AxbfLxb62L2-km-11" value="Запрос на получение HTML&lt;br&gt;страницы с курсами" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="510" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5hc7V5AxbfLxb62L2-km-16" value="Вызов сторонней модели&lt;br&gt;и маппинг" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="5hc7V5AxbfLxb62L2-km-13" target="5hc7V5AxbfLxb62L2-km-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5hc7V5AxbfLxb62L2-km-13" value="Обработка страницы&lt;br&gt;через JSDOM" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="510" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5hc7V5AxbfLxb62L2-km-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="5hc7V5AxbfLxb62L2-km-15" target="5hc7V5AxbfLxb62L2-km-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5hc7V5AxbfLxb62L2-km-15" value="Парсинг &quot;сырых&quot;&lt;br&gt;данных в модель&lt;br&gt;данных" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="630" width="140" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

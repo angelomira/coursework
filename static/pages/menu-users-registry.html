@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>var exports = {};</script>
+    <script src="../js/account-check.js"></script>
+    <script src="../js/account-auths.js"></script>
+    <script src="../js/navs.js"></script>
+    <script src="../js/auth-level.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Система обменного пункта</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="./../css/main.css">
+</head>
+<header>
+    <div class="header-bar">
+        <div class="logo">
+            <button id="menu-button">Меню</button>
+            <div id="dropdown-menu" class="dropdown-content">
+                <a href="account.html">Об аккаунте</a>
+                <a href="main.html">Главное меню</a>
+                <a href="menu-users-array.html">Меню работы с клиентом</a>
+                <a href="menu-users-registry.html">Меню регистрации клиента</a>
+                <a href="menu-fund-create.html">Меню регистрации валютных фондов</a>
+            </div>
+        </div>
+        <div class="header-links">
+            <a href="#">Контакты</a>
+            <a href="#">Юриспруденция</a>
+        </div>
+        <button id="deauth" class="deauth-button">Деавторизоваться</button>
+    </div>
+</header>
+<body>
+    <script src="../js/auth/account-registry.js"></script>
+    <div class="container">
+        <h2>Регистрация нового пользователя</h2>
+        <form id="reg.form" method="post">
+            <div class="form-group">
+                <label for="firstname">Имя<span style="color: red;">*</span>:</label>
+                <input type="text" class="form-control" id="firstname" name="firstname" required>
+            </div>
+            <div class="form-group">
+                <label for="lastname">Фамилия<span style="color: red;">*</span>:</label>
+                <input type="text" class="form-control" id="lastname" name="lastname" required>
+            </div>
+            <div class="form-group">
+                <label for="middlename">Отчество</label>
+                <input type="text" class="form-control" id="middlename" name="middlename">
+            </div>
+            <div class="form-group">
+                <label for="email">Электронная почта</label>
+                <input type="email" class="form-control" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="phone">Телефон</label>
+                <input type="text" class="form-control" id="phone" name="phone">
+            </div>
+            <div class="form-group">
+                <label for="passport">Паспорт<span style="color: red;">*</span>:</label>
+                <input type="text" class="form-control" id="passport" name="passport" required>
+            </div>
+            <div class="form-group">
+                <label for="login">Логин<span style="color: red;">*</span>:</label>
+                <input type="text" class="form-control" id="login" name="login" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Пароль<span style="color: red;">*</span>:</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="role">Роль<span style="color: red;">*</span>:</label>
+                <select class="form-control" id="role" name="role" required>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Зарегистрировать</button>
+        </form>
+    </div>
+    <div id="result"></div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Role {
+  id     BigInt @id @default(autoincrement())
+  naming String
+  access Int
+  User   User[]
+}
+
+model User {
+  id            BigInt        @id @default(autoincrement())
+  name_forename String
+  name_cognomen String
+  name_patronim String?
+  email         String?
+  phone         String?
+  id_role       BigInt
+  passp         String
+  login         String
+  passw         String
+  Fund          Fund[]
+  Interaction   Interaction[]
+  Operabook     Operabook[]
+  Role          Role          @relation(fields: [id_role], references: [id], map: "User_fkey_id_role")
+}
+
+model Checkbook {
+  id           BigInt    @id @default(autoincrement())
+  id_operation BigInt
+  date         DateTime  @default(now())
+  is_dup       Boolean?
+  is_gen       Boolean?
+  Operabook    Operabook @relation(fields: [id_operation], references: [id], map: "Checkbook_fkey_id_operation")
+}
+
+model Fund {
+  id          BigInt @id @default(autoincrement())
+  curr_naming String @db.VarChar(3)
+  curr_volume Float
+  id_user     BigInt @default(autoincrement())
+  User        User   @relation(fields: [id_user], references: [id], map: "Fund_fkey_id_user")
+}
+
+model Interaction {
+  id      BigInt @id @default(autoincrement())
+  id_type BigInt
+  id_user BigInt
+  Type    Type   @relation(fields: [id_type], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "Interaction_fkey_id_type")
+  User    User   @relation(fields: [id_user], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "Interaction_fkey_id_user")
+}
+
+model Operabook {
+  id        BigInt      @id @default(autoincrement())
+  id_user   BigInt
+  result    Int         @default(0)
+  status    Int         @default(0)
+  curr      String?
+  curr_sum  Float?
+  date      DateTime    @default(now())
+  Checkbook Checkbook[]
+  User      User        @relation(fields: [id_user], references: [id], map: "Operabook_fkey_id_user")
+}
+
+model Type {
+  id          BigInt        @id @default(autoincrement())
+  naming      String
+  status      Int
+  Interaction Interaction[]
+}

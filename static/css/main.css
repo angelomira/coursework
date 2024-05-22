@@ -1,0 +1,290 @@
+@import url('https://rsms.me/inter/inter.css');
+
+:root {
+    --color-light: white;
+    --color-dark: #212121;
+    --color-mid: #2c2c2c;
+    --color-signal: #fab700;
+
+    --color-background: var(--color-light);
+    --color-text: var(--color-dark);
+    --color-accent: var(--color-signal);
+
+    --size-bezel: .5rem;
+    --size-radius: 4px;
+
+    line-height: 1.4;
+
+    font-family: 'Inter', sans-serif;
+    font-size: calc(.6rem + .4vw);
+    color: var(--color-text);
+    background: var(--color-background);
+    font-weight: 300;
+    padding: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 900;
+}
+
+mark {
+    background: var(--color-accent);
+    color: var(--color-text);
+    font-weight: bold;
+    padding: 0 0.2em;
+}
+
+.card {
+    background: var(--color-background);
+    padding: calc(4 * var(--size-bezel));
+    margin-top: calc(4 * var(--size-bezel));
+    border-radius: var(--size-radius);
+    border: 3px solid var(--color-shadow, currentColor);
+    box-shadow: .5rem .5rem 0 var(--color-shadow, currentColor);
+
+    &--inverted {
+        --color-background: var(--color-dark);
+        color: var(--color-light);
+        --color-shadow: var(--color-accent);
+    }
+
+    &--accent {
+        --color-background: var(--color-signal);
+        --color-accent: var(--color-light);
+        color: var(--color-dark);
+    }
+
+    *:first-child {
+        margin-top: 0;
+    }
+}
+
+.l-design-widht {
+    max-width: 40rem;
+    padding: 1rem;
+}
+
+.input {
+    position: relative;
+
+    &__label {
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: calc(var(--size-bezel) * 0.75) calc(var(--size-bezel) * .5);
+        margin: calc(var(--size-bezel) * 0.75 + 3px) calc(var(--size-bezel) * .5);
+        background: pink;
+        white-space: nowrap;
+        transform: translate(0, 0);
+        transform-origin: 0 0;
+        background: var(--color-background);
+        transition: transform 120ms ease-in;
+        font-weight: bold;
+        line-height: 1.2;
+    }
+
+    &__field {
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        border: 3px solid currentColor;
+        padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
+        color: currentColor;
+        background: transparent;
+        border-radius: var(--size-radius);
+
+        &:focus,
+        &:not(:placeholder-shown) {
+            &+.input__label {
+                transform: translate(.25rem, -65%) scale(.8);
+                color: var(--color-accent);
+            }
+        }
+    }
+}
+
+.button-group {
+    margin-top: calc(var(--size-bezel) * 2.5);
+}
+
+button {
+    color: currentColor;
+    padding: var(--size-bezel) calc(var(--size-bezel) * 2);
+    background: var(--color-accent);
+    border: none;
+    border-radius: var(--size-radius);
+    font-weight: 900;
+
+    &[type=reset] {
+        background: var(--color-background);
+        font-weight: 200;
+    }
+}
+
+button+button {
+    margin-left: calc(var(--size-bezel) * 2);
+}
+
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-right: .5em;
+}
+
+.hidden {
+    display: none;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-mid);
+    padding: 0.5%;
+    padding-left: 0;
+    border-radius: 0;
+    height: 60px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: var(--color-light);
+    margin-right: 15px;
+    margin-left: 15px;
+    font-family: 'Inter';
+    font-weight: bold;
+    align-self: center;
+}
+
+.navigation a:hover {
+    color: var(--color-signal);
+}
+
+#deauth,
+.menu {
+    padding: 0.5% 2%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#deauth {
+    background-color: var(--color-signal);
+    color: var(--color-dark);
+    margin-right: -0.5%;
+    border-radius: 0;
+}
+
+.menu {
+    background-color: var(--color-signal);
+    color: var(--color-dark);
+    border-radius: 0;
+    width: 175%;
+    text-align: center;
+}
+
+#deauth:hover,
+#menu:hover,
+.menu button:hover {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: white;
+    box-shadow: .5rem .5rem 0 var(--color-shadow, currentColor);    
+    z-index: 1;
+    text-align: left;
+}
+
+.dropdown a {
+    display: block;
+    padding: 12px 16px;
+    margin-left: 0px;
+    margin-right: 0px;
+    text-decoration: none;
+    color: var(--color-light);
+    background-color: var(--color-signal);
+}
+
+.dropdown a:hover {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
+.panel {
+    margin-left: 23%;
+    min-width: 50%;
+    margin-top: 2.5%;
+    padding-top: -5%;
+    width: 50%;
+    display: flex;
+    gap: 5%;
+}
+.panel-center {
+    display: flexbox;
+    vertical-align: middle;
+    align-self: center;
+    text-align: center;
+}
+
+.panel-label {
+    font-family: Inter;
+    font-size: 18;
+    font-weight: bold;
+    margin-bottom: -1px;
+    padding-bottom: 2.5%;
+    display: grid;
+}
+
+.panel-signal {
+    font-family: Inter;
+    font-size: 18;
+    margin-top: -0.5px;
+    margin-bottom: -0.5px;
+    margin-left: 5px;
+    padding-bottom: 2.5%;
+    display: grid;
+    color: var(--color-signal);
+    font-weight: bold;
+}
+
+.panel-item {
+    margin-top: 2.5%;
+    margin-bottom: 3%;
+    font-family: Inter;
+    font-size: 18;
+    font-weight: bold;
+}
+
+.panel-item button {
+    size: 16px;
+}
+
+.panel input,
+.panel select {
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+  font-weight: bold;
+  border: 3px solid var(--color-shadow, currentColor);
+  box-shadow: .5rem .5rem 0 var(--color-shadow, currentColor);
+}
+
+.panel select {
+    margin-top: 25px;
+    width: 100px;
+}
+
+.panel input:focus,
+.panel select:focus {
+  outline: none;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit User</title>
+</head>
+<body>
+    <h1>Edit User</h1>
+    <form id="editUserForm">
+        <input type="hidden" id="userId" name="userId">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName"><br>
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName"><br>
+        <!-- Add more input fields for other user attributes -->
+        <button type="submit">Save Changes</button>
+    </form>
+
+    <script>
+        // JavaScript code to fetch user data and populate the form fields
+        window.onload = async function() {
+            const userId = window.location.pathname.split('/').pop(); // Extract userId from URL
+            const response = await fetch(`/api/users/${userId}`);
+            const userData = await response.json();
+
+            // Populate form fields with user data
+            document.getElementById('userId').value = userData.user_id;
+            document.getElementById('firstName').value = userData.user_firstname;
+            document.getElementById('lastName').value = userData.user_lastname;
+            // Populate other form fields as needed
+        };
+
+        // JavaScript code to handle form submission (saving changes)
+        document.getElementById('editUserForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            const formData = new FormData(this);
+            const userId = formData.get('userId');
+            const requestBody = Object.fromEntries(formData.entries());
+
+            try {
+                const response = await fetch(`/api/users/${userId}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(requestBody)
+                });
+
+                if (response.ok) {
+                    alert('User information updated successfully');
+                } else {
+                    const errorData = await response.json();
+                    alert('Error: ' + errorData.error);
+                }
+            } catch (error) {
+                console.error('Error updating user information:', error);
+                alert('An error occurred while updating user information');
+            }
+        });
+    </script>
+</body>
+</html>
