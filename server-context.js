@@ -22,8 +22,24 @@ const routes_map = [
         'access': 1
     },
     {
-        'paging': '/pages/account.html',
+        'paging': '/pages/accounts/account.html',
         'access': 0
+    },
+    {
+        'paging': '/pages/forms/credentials.html',
+        'access': 0
+    },
+    {
+        'paging': '/pages/funds/create.html',
+        'access': 1
+    },
+    {
+        'paging': '/pages/funds/exchange.html',
+        'access': 1
+    },
+    {
+        'paging': '/pages/funds/fulfil.html',
+        'access': 1
     }
 ];
 exports.default = routes_map;

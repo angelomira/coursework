@@ -1,12 +1,6 @@
-import express,
-{
-    Request,
-    Response,
-} from 'express';
-
 import API from './api/currencies';
-import LCU from './addons/logic-unifier';
 
+import express from 'express';
 import session from 'express-session';
 
 const options = require('./server-options.json');
@@ -57,9 +51,16 @@ import  route_auth_prog from './routes/route-auth-prog';
 app.use(route_auth_prog);
 import  route_auth_sess from './routes/route-auth-sess';
 app.use(route_auth_sess);
+import  route_exchange from './routes/route-exchange';
+app.use(route_exchange);
 import  route_roles from './routes/route-roles';
 app.use(route_roles);
-
+import  route_funds from './routes/route-funds';
+app.use(route_funds);
+import  route_checks from './routes/route-checks';
+app.use(route_checks);
+// import  route_operas from './routes/route-operas';
+// app.use(route_operas);
 
 app.listen(PORT | 3000, () => {
     Loggerin.info('Server is running on port: ', PORT);

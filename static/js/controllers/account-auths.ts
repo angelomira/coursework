@@ -31,9 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (!response.ok) throw new Error('Error retrieving data to API.');
 
-                const data = await response.json();
-
-                const user = data.user;
+                const user = await response.json();
 
                 if(!localStorage.getItem('session'))
                     localStorage.setItem('session', user['session']);

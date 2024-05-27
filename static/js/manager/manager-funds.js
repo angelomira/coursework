@@ -8,39 +8,26 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-Object.defineProperty(exports, "__esModule", { value: true });
 document.addEventListener('DOMContentLoaded', () => __awaiter(void 0, void 0, void 0, function* () {
     const BASE_URL = 'http://localhost:3000/';
-    var user_authkey = localStorage.getItem('session');
-    if (!user_authkey) {
-        if (!INDEX())
-            window.location.href = '/index.html';
-        return;
-    }
+    const userq = localStorage.getItem('userq');
+    if (!userq)
+        window.location.href = '/pages/menu-users-array.html';
     try {
-        const response = yield fetch(BASE_URL + `sessions/${user_authkey}`, {
-            method: 'GET',
+        const userq_json = JSON.parse(userq);
+        const response = yield fetch(BASE_URL + 'funds/get', {
+            method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-            }
+            },
+            body: JSON.stringify({
+                'id_user': userq_json.id
+            })
         });
-        if (!response.ok)
-            throw new Error('Error retrieving data from API.');
         const data = yield response.json();
-        if (data['res']) {
-            if (INDEX()) {
-                window.location.href = '/pages/main.html';
-            }
-        }
-        else if (!INDEX())
-            window.location.href = '/index.html';
+        console.log(data);
     }
     catch (error) {
         console.error(error);
-        if (!INDEX())
-            window.location.href = '/index.html';
     }
 }));
-function INDEX() {
-    return document.location.pathname === '/index.html' || document.location.pathname === '/';
-}

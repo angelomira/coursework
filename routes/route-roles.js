@@ -113,9 +113,37 @@ router.post('/roles', (req, res) => __awaiter(void 0, void 0, void 0, function* 
             }
         });
         const roles_json = roles.map(role => (Object.assign(Object.assign({}, role), { id: role.id.toString(), access: role.access.toString() })));
-        return res.status(200).json({
-            'roles': roles_json
+        return res.status(200).json(roles_json).send();
+    }
+    catch (error) {
+        loggerin_1.default.error('Error fetcing POST of role list: ', error);
+        return res.status(500).json({
+            error: 'Internal server error.'
         }).send();
+    }
+}));
+router.post('/role', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    loggerin_1.default.info('Caught POST request about roles list, given id:', `${req.body.roleid}.`);
+    try {
+        if (!req.body) {
+            return res.status(400).json({
+                error: 'No body to registry or parse in request.'
+            });
+        }
+        const { id_role } = req.body;
+        const role = yield prisma.role.findFirst({
+            where: {
+                id: BigInt(id_role)
+            }
+        });
+        if (!role)
+            throw new ReferenceError('There is no user-role with such provided data.');
+        const roles_json = {
+            id: role.id.toString(),
+            access: role.access.toString(),
+            naming: role.naming
+        };
+        return res.status(200).json(roles_json).send();
     }
     catch (error) {
         loggerin_1.default.error('Error fetcing POST of role list: ', error);

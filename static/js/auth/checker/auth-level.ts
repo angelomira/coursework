@@ -1,4 +1,4 @@
-export {}
+export { }
 
 document.addEventListener('DOMContentLoaded', async () => {
     const BASE_URL = 'http://localhost:3000/';

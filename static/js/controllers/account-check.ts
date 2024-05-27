@@ -40,5 +40,5 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 function INDEX() {
-    return document.location.pathname === '/index.html';
+    return document.location.pathname === '/index.html' || document.location.pathname === '/';
 }

@@ -103,7 +103,15 @@ router.post('/api/registry/', (req, res) => __awaiter(void 0, void 0, void 0, fu
             });
         }
         const { forename, cognomen, patronim, id_role, email, phone, passp, login, passw, } = req.body;
+        console.log(forename, cognomen, patronim, id_role, email, phone, passp, login, passw);
         const _hash = crypto_js_1.default.MD5(`${passw}`).toString();
+        if (!(yield prisma.user.findMany({
+            where: {
+                passp: passp,
+                login: login
+            }
+        })))
+            throw new Error('User with same credentials already exists in the database.');
         yield prisma.user.create({
             data: {
                 id_role: id_role,
@@ -238,9 +246,7 @@ router.post('/api/auth/', (req, res) => __awaiter(void 0, void 0, void 0, functi
                 id_type: 0
             }
         });
-        return res.status(200).json({
-            user: user_parser
-        }).send();
+        return res.status(200).json(user_parser).send();
     }
     catch (error) {
         loggerin_1.default.error('Error fetcing POST of user auth: ', error);
@@ -367,70 +373,56 @@ router.post('/api/auth/me', (req, res) => __awaiter(void 0, void 0, void 0, func
         }).send();
     }
 }));
-// router.put('/api/update/user', async (req, res) => {
-//     try {
-//         const { userId, firstName, lastName, email, phoneNumber } = req.body;
-//         // Use Prisma or any other ORM to update user data in the database
-//         const updatedUser = await prisma.user.update({
-//             where: {
-//                 user_id: parseInt(userId)
-//             },
-//             data: {
-//                 user_firstname: firstName,
-//                 user_lastname: lastName,
-//                 user_mail: email,
-//                 user_phone: phoneNumber
-//                 // Add other fields you want to update
-//             }
-//         });
-//         return res.status(200).json(updatedUser);
-//     } catch (error) {
-//         console.error('Error updating user:', error);
-//         return res.status(500).json({ error: 'Internal server error' });
-//     }
-// });
-// router.get('/edit-user/:userId', async (req, res) => {
-//     try {
-//         const userId = req.params.userId;
-//         // Fetch user data based on userId from the database
-//         const user = await prisma.user.findUnique({
-//             where: {
-//                 user_id: parseInt(userId) // Assuming userId is an integer
-//             }
-//         });
-//         if (!user) {
-//             // If user is not found, return a 404 Not Found error
-//             return res.status(404).send('User not found');
-//         }
-//         // Render the "edit-user.html" page with the user data
-//         res.sendFile(path.join(__dirname, './static/pages/edit-user.html'));
-//     } catch (error) {
-//         // Handle errors
-//         console.error('Error fetching user data:', error);
-//         res.status(500).send('Internal server error');
-//     }
-// });
 router.get('/api/users', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const users = yield prisma.user.findMany();
-        // Преобразуйте значения BigInt в строку
-        const serializedUsers = users.map(user => ({
-            id: String(user.id),
+        const users_serialized = users.map(user => ({
+            id: user.id.toString(),
             name_forename: user.name_forename,
             name_cognomen: user.name_cognomen,
             name_patronim: user.name_patronim,
             email: user.email,
             phone: user.phone,
-            id_role: String(user.id_role),
+            id_role: user.id_role.toString(),
             passp: user.passp,
             login: user.login,
-            // Другие поля пользователя
         }));
-        res.status(200).json(serializedUsers);
+        return res.status(200).json(users_serialized);
     }
     catch (error) {
-        console.error('Error fetching users: ', error);
-        res.status(500).json({ error: 'Internal server error.' });
+        return res.status(500).json({
+            error: 'Internal server error.'
+        });
+    }
+}));
+router.post('/api/user', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const { id } = req.body;
+        const user = yield prisma.user.findFirst({
+            where: {
+                id: id
+            }
+        });
+        if (!user)
+            throw new ReferenceError('There is no user with such provided data.');
+        var user_parser = {
+            id: user.id.toString(),
+            name_forename: user.name_forename,
+            name_cognomen: user.name_cognomen,
+            name_patronim: user.name_patronim,
+            email: user.email,
+            phone: user.phone,
+            id_role: user.id_role.toString(),
+            passp: user.passp,
+            login: user.login,
+        };
+        return res.status(200).json(user_parser).send();
+    }
+    catch (error) {
+        console.error(error);
+        return res.status(500).json({
+            error: 'Internal server error.'
+        });
     }
 }));
 exports.default = router;

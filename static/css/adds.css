@@ -1,0 +1,310 @@
+@import url('https://rsms.me/inter/inter.css');
+
+:root {
+    --color-light: white;
+    --color-dark: #212121;
+    --color-mid: #2c2c2c;
+    --color-signal: #fab700;
+
+    --color-background: var(--color-light);
+    --color-text: var(--color-dark);
+    --color-accent: var(--color-signal);
+
+    --size-bezel: .5rem;
+    --size-radius: 4px;
+
+    line-height: 1.4;
+
+    font-family: 'Inter', sans-serif;
+    font-size: calc(.6rem + .4vw);
+    color: var(--color-text);
+    background: var(--color-background);
+    font-weight: 300;
+    padding: 0;
+}
+
+.title {
+    align-self: center;
+    text-align: center;
+}
+
+.params-center {
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+.tabletop {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 33%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    font-weight: bold;
+    border: 3px solid var(--color-shadow, currentColor);
+    box-shadow: .5rem .5rem 0 var(--color-shadow, currentColor);
+}
+
+.tabletop-select {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 250px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    border: 3px solid var(--color-shadow, currentColor);
+    box-shadow: .5rem .5rem 0 var(--color-shadow, currentColor);
+}
+
+.tabletop:focus,
+.tabletop-select:focus {
+    outline: none;
+}
+
+.table-database {
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.table-database th {
+    text-align: center;
+}
+
+.table-database button {
+    border-radius: 0;
+}
+
+.table-database th,
+.table-database td {
+    width: 125px;
+}
+
+.account {
+    margin-left: 30.5%;
+    margin-top: 2.5%;
+    padding-top: -5%;
+    width: 40%;
+    display: inline-flexbox;
+    gap: 7.5%;
+    align-items: center;
+    align-self: center;
+}
+
+.account-header {
+    margin-top: -12.5px;
+}
+
+.account-center {
+    display: flexbox;
+    vertical-align: middle;
+    align-self: center;
+    text-align: center;
+}
+
+.account-label {
+    font-family: Inter;
+    font-size: 18;
+    font-weight: bold;
+    margin-bottom: -1px;
+    padding-bottom: 2.5%;
+    display: grid;
+}
+
+.account-signal {
+    font-family: Inter;
+    font-size: 18;
+    margin-top: -0.5px;
+    margin-bottom: -0.5px;
+    margin-left: 5px;
+    padding-bottom: 2.5%;
+    display: grid;
+    color: var(--color-signal);
+    font-weight: bold;
+}
+
+.account-item {
+    margin-top: 2.5%;
+    margin-bottom: 3%;
+    font-family: Inter;
+    font-size: 18;
+    font-weight: bold;
+}
+
+/* Ensure you include this after the bootstrap.min.css and bootstrap-theme.min.css */
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.info-container .card {
+    flex: 1;
+    margin-right: 20px;
+}
+
+/* Remove margin-right for the last card */
+.info-container .card:last-child {
+    margin-right: 0;
+}
+/* Responsive design: stack the cards on smaller screens */
+@media (max-width: 768px) {
+    .info-container {
+        flex-direction: column;
+    }
+
+    .info-container .card {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .info-container .card:last-child {
+        margin-bottom: 0;
+    }
+}
+
+#account-fund button {
+    margin: 5px;
+}
+
+.create-fund {
+    width: 33%;
+    margin-left: 30%;
+    font-family: Inter;
+    font-size: 18;
+    font-weight: bold;
+    padding-top: 0;
+}
+
+.create-fund h3 {
+    margin-top: 6.6%;
+}
+
+.create-fund button {
+    size: 16px;
+    margin-top: 5px;
+}
+
+.create-fund input,
+.create-fund select {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    font-weight: bold;
+    border: 3px solid var(--color-shadow, currentColor);
+    box-shadow: .5rem .5rem 0 var(--color-shadow, currentColor);
+    margin-bottom: 15px;
+}
+
+.create-fund select {
+    padding: 5px;
+}
+
+.create-fund input:focus,
+.create-fund select:focus {
+    outline: none;
+}
+
+.account-reg {
+    margin-left: 30.5%;
+    margin-top: 2.5%;
+    padding-top: -5%;
+    width: 40%;
+    display: inline-flexbox;
+    gap: 7.5%;
+    align-items: center;
+    align-self: center;
+}
+
+.account-reg:focus {
+    outline: none;
+}
+
+.account-reg input,
+.account-reg select {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    font-weight: bold;
+    border: 3px solid var(--color-dark, currentColor);
+    box-shadow: .5rem .5rem 0 var(--color-dark, currentColor);
+    margin-bottom: 15px;
+    height: 32px;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+}
+
+.account-reg-header {
+    margin-top: -12.5px;
+}
+
+.account-center {
+    display: flexbox;
+    vertical-align: middle;
+    align-self: center;
+    text-align: center;
+}
+
+.account-label {
+    font-family: Inter;
+    font-size: 18;
+    font-weight: bold;
+    margin-bottom: -1px;
+    padding-bottom: 2.5%;
+    display: grid;
+}
+
+.account-signal {
+    font-family: Inter;
+    font-size: 18;
+    margin-top: -0.5px;
+    margin-bottom: -0.5px;
+    margin-left: 5px;
+    padding-bottom: 2.5%;
+    display: grid;
+    color: var(--color-signal);
+    font-weight: bold;
+}
+
+.account-item {
+    margin-top: 2.5%;
+    margin-bottom: 3%;
+    font-family: Inter;
+    font-size: 18;
+    font-weight: bold;
+}
+
+.tableset {
+    margin-left: 30.5%;
+    margin-top: 2.5%;
+    padding-top: -5%;
+    width: 40%;
+    display: inline-flexbox;
+    gap: 7.5%;
+    align-items: center;
+    align-self: center;
+    margin-bottom: 33px;
+}
+
+.tableset:focus {
+    outline: none;
+}
+
+.tableset input,
+.tableset select {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    font-weight: bold;
+    border: 3px solid var(--color-dark, currentColor);
+    box-shadow: .5rem .5rem 0 var(--color-dark, currentColor);
+    margin-bottom: 15px;
+    height: 32px;
+}

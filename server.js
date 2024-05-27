@@ -3,8 +3,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const express_1 = __importDefault(require("express"));
 const currencies_1 = __importDefault(require("./api/currencies"));
+const express_1 = __importDefault(require("express"));
 const express_session_1 = __importDefault(require("express-session"));
 const options = require('./server-options.json');
 const loggerin_1 = __importDefault(require("./addons/loggerin"));
@@ -34,8 +34,16 @@ const route_auth_prog_1 = __importDefault(require("./routes/route-auth-prog"));
 app.use(route_auth_prog_1.default);
 const route_auth_sess_1 = __importDefault(require("./routes/route-auth-sess"));
 app.use(route_auth_sess_1.default);
+const route_exchange_1 = __importDefault(require("./routes/route-exchange"));
+app.use(route_exchange_1.default);
 const route_roles_1 = __importDefault(require("./routes/route-roles"));
 app.use(route_roles_1.default);
+const route_funds_1 = __importDefault(require("./routes/route-funds"));
+app.use(route_funds_1.default);
+const route_checks_1 = __importDefault(require("./routes/route-checks"));
+app.use(route_checks_1.default);
+// import  route_operas from './routes/route-operas';
+// app.use(route_operas);
 app.listen(PORT | 3000, () => {
     loggerin_1.default.info('Server is running on port: ', PORT);
 });

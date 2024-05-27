@@ -25,6 +25,7 @@ model User {
   passp         String
   login         String
   passw         String
+  Checkbook     Checkbook[]
   Fund          Fund[]
   Interaction   Interaction[]
   Operabook     Operabook[]
@@ -37,7 +38,9 @@ model Checkbook {
   date         DateTime  @default(now())
   is_dup       Boolean?
   is_gen       Boolean?
+  id_user      BigInt
   Operabook    Operabook @relation(fields: [id_operation], references: [id], map: "Checkbook_fkey_id_operation")
+  User         User      @relation(fields: [id_user], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "Checkbook_fkey_id_user")
 }
 
 model Fund {
@@ -59,10 +62,10 @@ model Interaction {
 model Operabook {
   id        BigInt      @id @default(autoincrement())
   id_user   BigInt
-  result    Int         @default(0)
+  amount    Float       @default(0)
   status    Int         @default(0)
   curr      String?
-  curr_sum  Float?
+  curr_sum  Float       @default(0)
   date      DateTime    @default(now())
   Checkbook Checkbook[]
   User      User        @relation(fields: [id_user], references: [id], map: "Operabook_fkey_id_user")

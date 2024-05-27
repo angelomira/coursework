@@ -200,7 +200,7 @@ button+button {
     top: 60px;
     left: 0;
     background-color: white;
-    box-shadow: .5rem .5rem 0 var(--color-shadow, currentColor);    
+    box-shadow: .5rem .5rem 0 var(--color-shadow, currentColor);
     z-index: 1;
     text-align: left;
 }
@@ -229,6 +229,7 @@ button+button {
     display: flex;
     gap: 5%;
 }
+
 .panel-center {
     display: flexbox;
     vertical-align: middle;
@@ -271,12 +272,12 @@ button+button {
 
 .panel input,
 .panel select {
-  padding-left: 10px;
-  padding-right: 10px;
-  width: 100%;
-  font-weight: bold;
-  border: 3px solid var(--color-shadow, currentColor);
-  box-shadow: .5rem .5rem 0 var(--color-shadow, currentColor);
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    font-weight: bold;
+    border: 3px solid var(--color-shadow, currentColor);
+    box-shadow: .5rem .5rem 0 var(--color-shadow, currentColor);
 }
 
 .panel select {
@@ -286,5 +287,103 @@ button+button {
 
 .panel input:focus,
 .panel select:focus {
-  outline: none;
+    outline: none;
+}
+
+footer {
+    background-color: var(--color-dark);
+    text-align: center;
+    vertical-align: bottom;
+    margin: 0 auto;
+    padding: 0 auto;
+    margin-top: 50%;
+    padding: 10px;
+    display: flex;
+    gap: 33%;
+}
+
+footer p,
+footer a {
+    text-decoration: none;
+    color: var(--color-light);
+    font-family: 'Inter';
+    font-weight: bold;
+    align-self: center;
+}
+
+footer p {
+    margin-top: 10px;
+}
+
+footer p:hover,
+footer a:hover {
+    color: var(--color-signal);
+}
+
+html {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+#timer {
+    color: var(--color-signal);
+}
+
+.container-n {
+    display: block;
+    margin: 0 auto;
+    margin-top: 5%;
+    width: 66%;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0;
+    font-size: medium;
+}
+
+.container input[type="text"],
+.container input[type="password"],
+.container button {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+
+}
+
+.container input[type="text"],
+.container input[type="password"] {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 43%;
+    font-weight: bold;
+    border: 3px solid var(--color-shadow, currentColor);
+    box-shadow: .5rem .5rem 0 var(--color-shadow, currentColor);
+}
+
+.container input[type="text"]:focus,
+.container input[type="password"]:focus {
+    outline: none;
+}
+
+.container label {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.container-n button {
+    margin-top: 25px;
+}
+
+button:hover {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
+.horizontal-line {
+    width: 100%;
+    height: 5px;
+    background-color: var(--color-dark);
+    margin-bottom: 17.5px;
 }

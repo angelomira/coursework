@@ -23,19 +23,20 @@ document.addEventListener('DOMContentLoaded', () => __awaiter(void 0, void 0, vo
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    roleid: Number(user_json['id_role'])
+                    id_role: user_json['id_role']
                 })
             });
             if (!response.ok)
                 throw new Error('Error retrieving data to API.');
             const data = yield response.json();
-            const role = data.roles;
+            const role = data;
             var ROLE_SELECT = document.getElementById('role');
             for (const assignee of role) {
-                if (assignee.role_id <= user_json['user_role']) {
+                console.log(assignee);
+                if (assignee.id < user_json['id_role']) {
                     var option = document.createElement('option');
-                    option.value = assignee.role_id;
-                    option.textContent = assignee.role_name;
+                    option.value = assignee.id;
+                    option.textContent = `${assignee.id} - ${assignee.naming}`;
                     ROLE_SELECT.appendChild(option);
                 }
             }
@@ -63,10 +64,10 @@ document.addEventListener('DOMContentLoaded', () => __awaiter(void 0, void 0, vo
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                'name_patronim': INPUT_MIDDLENAME.value,
-                'name_forename': INPUT_FIRSTNAME.value,
-                'name_cognomen': INPUT_LASTNAME.value,
-                'role': role,
+                'patronim': INPUT_MIDDLENAME.value,
+                'forename': INPUT_FIRSTNAME.value,
+                'cognomen': INPUT_LASTNAME.value,
+                'id_role': role,
                 'email': INPUT_EMAIL.value,
                 'passp': INPUT_PASSPORT.value,
                 'phone': INPUT_PHONE.value,
